@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2EC488B41F61CECE0086ED68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488B31F61CECE0086ED68 /* AppDelegate.swift */; };
+		2EC488B61F61CECE0086ED68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488B51F61CECE0086ED68 /* ViewController.swift */; };
+		2EC488B91F61CECE0086ED68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EC488B71F61CECE0086ED68 /* Main.storyboard */; };
+		2EC488BB1F61CECE0086ED68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EC488BA1F61CECE0086ED68 /* Assets.xcassets */; };
+		2EC488BE1F61CECE0086ED68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EC488BC1F61CECE0086ED68 /* LaunchScreen.storyboard */; };
+		2EC488CF1F61CF900086ED68 /* PermissionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488CE1F61CF900086ED68 /* PermissionsController.swift */; };
+		2EC488D11F61D0140086ED68 /* YelpSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488D01F61D0140086ED68 /* YelpSearchController.swift */; };
+		2EC488D31F61D05D0086ED68 /* YelpSearchResultsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488D21F61D05D0086ED68 /* YelpSearchResultsDataSource.swift */; };
+		2EC488D51F61D09F0086ED68 /* YelpBusinessDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488D41F61D09F0086ED68 /* YelpBusinessDetailController.swift */; };
+		2EC488D71F61D0D30086ED68 /* YelpBusinessDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488D61F61D0D30086ED68 /* YelpBusinessDetailViewModel.swift */; };
+		2EC488D91F61D10B0086ED68 /* YelpReviewsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488D81F61D10B0086ED68 /* YelpReviewsDataSource.swift */; };
+		2EC488DB1F61D1950086ED68 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488DA1F61D1950086ED68 /* ReviewCell.swift */; };
+		2EC488DD1F61D1C70086ED68 /* ReviewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488DC1F61D1C70086ED68 /* ReviewCellViewModel.swift */; };
+		2EC488DF1F61D1F20086ED68 /* YelpBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488DE1F61D1F20086ED68 /* YelpBusiness.swift */; };
+		2EC488E11F61D2320086ED68 /* YelpReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488E01F61D2320086ED68 /* YelpReview.swift */; };
+		2EC488E31F61D2580086ED68 /* YelpCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488E21F61D2580086ED68 /* YelpCategory.swift */; };
+		2EC488E51F61D2790086ED68 /* YelpTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488E41F61D2790086ED68 /* YelpTransaction.swift */; };
+		2EC488E71F61D29A0086ED68 /* YelpUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488E61F61D29A0086ED68 /* YelpUser.swift */; };
+		2EC488E91F61D2BE0086ED68 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488E81F61D2BE0086ED68 /* Coordinate.swift */; };
+		2EC488EF1F61D3240086ED68 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488EE1F61D3240086ED68 /* JSONDecodable.swift */; };
+		2EC488F21F61D3580086ED68 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488F11F61D3580086ED68 /* Endpoint.swift */; };
+		2EC488F41F61D5110086ED68 /* BusinessHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488F31F61D5110086ED68 /* BusinessHours.swift */; };
+		2EC488F61F61D58D0086ED68 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488F51F61D58D0086ED68 /* Address.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2EC488B01F61CECE0086ED68 /* ReviewingRestaurants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewingRestaurants.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EC488B31F61CECE0086ED68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2EC488B51F61CECE0086ED68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2EC488B81F61CECE0086ED68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2EC488BA1F61CECE0086ED68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2EC488BD1F61CECE0086ED68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2EC488BF1F61CECE0086ED68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EC488CE1F61CF900086ED68 /* PermissionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionsController.swift; sourceTree = "<group>"; };
+		2EC488D01F61D0140086ED68 /* YelpSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpSearchController.swift; sourceTree = "<group>"; };
+		2EC488D21F61D05D0086ED68 /* YelpSearchResultsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpSearchResultsDataSource.swift; sourceTree = "<group>"; };
+		2EC488D41F61D09F0086ED68 /* YelpBusinessDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpBusinessDetailController.swift; sourceTree = "<group>"; };
+		2EC488D61F61D0D30086ED68 /* YelpBusinessDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpBusinessDetailViewModel.swift; sourceTree = "<group>"; };
+		2EC488D81F61D10B0086ED68 /* YelpReviewsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpReviewsDataSource.swift; sourceTree = "<group>"; };
+		2EC488DA1F61D1950086ED68 /* ReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		2EC488DC1F61D1C70086ED68 /* ReviewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCellViewModel.swift; sourceTree = "<group>"; };
+		2EC488DE1F61D1F20086ED68 /* YelpBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpBusiness.swift; sourceTree = "<group>"; };
+		2EC488E01F61D2320086ED68 /* YelpReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpReview.swift; sourceTree = "<group>"; };
+		2EC488E21F61D2580086ED68 /* YelpCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpCategory.swift; sourceTree = "<group>"; };
+		2EC488E41F61D2790086ED68 /* YelpTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpTransaction.swift; sourceTree = "<group>"; };
+		2EC488E61F61D29A0086ED68 /* YelpUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpUser.swift; sourceTree = "<group>"; };
+		2EC488E81F61D2BE0086ED68 /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		2EC488EE1F61D3240086ED68 /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
+		2EC488F11F61D3580086ED68 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		2EC488F31F61D5110086ED68 /* BusinessHours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessHours.swift; sourceTree = "<group>"; };
+		2EC488F51F61D58D0086ED68 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2EC488AD1F61CECE0086ED68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EC488A71F61CECE0086ED68 = {
+			isa = PBXGroup;
+			children = (
+				2EC488B21F61CECE0086ED68 /* ReviewingRestaurants */,
+				2EC488B11F61CECE0086ED68 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2EC488B11F61CECE0086ED68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2EC488B01F61CECE0086ED68 /* ReviewingRestaurants.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2EC488B21F61CECE0086ED68 /* ReviewingRestaurants */ = {
+			isa = PBXGroup;
+			children = (
+				2EC488C81F61CEEF0086ED68 /* Models */,
+				2EC488CD1F61CF2B0086ED68 /* Controllers */,
+				2EC488C91F61CEF50086ED68 /* Views */,
+				2EC488C51F61CEDB0086ED68 /* Permissions */,
+				2EC488C71F61CEE90086ED68 /* Networking */,
+				2EC488CA1F61CEFD0086ED68 /* Search */,
+				2EC488CB1F61CF040086ED68 /* Buisness Details */,
+				2EC488C61F61CEE30086ED68 /* Delegates */,
+				2EC488CC1F61CF100086ED68 /* Supporting Files */,
+			);
+			path = ReviewingRestaurants;
+			sourceTree = "<group>";
+		};
+		2EC488C51F61CEDB0086ED68 /* Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				2EC488CE1F61CF900086ED68 /* PermissionsController.swift */,
+			);
+			name = Permissions;
+			sourceTree = "<group>";
+		};
+		2EC488C61F61CEE30086ED68 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				2EC488B31F61CECE0086ED68 /* AppDelegate.swift */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		2EC488C71F61CEE90086ED68 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2EC488EE1F61D3240086ED68 /* JSONDecodable.swift */,
+				2EC488F11F61D3580086ED68 /* Endpoint.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		2EC488C81F61CEEF0086ED68 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2EC488DE1F61D1F20086ED68 /* YelpBusiness.swift */,
+				2EC488E01F61D2320086ED68 /* YelpReview.swift */,
+				2EC488E21F61D2580086ED68 /* YelpCategory.swift */,
+				2EC488E41F61D2790086ED68 /* YelpTransaction.swift */,
+				2EC488E61F61D29A0086ED68 /* YelpUser.swift */,
+				2EC488E81F61D2BE0086ED68 /* Coordinate.swift */,
+				2EC488F31F61D5110086ED68 /* BusinessHours.swift */,
+				2EC488F51F61D58D0086ED68 /* Address.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2EC488C91F61CEF50086ED68 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2EC488B71F61CECE0086ED68 /* Main.storyboard */,
+				2EC488BC1F61CECE0086ED68 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2EC488CA1F61CEFD0086ED68 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2EC488D01F61D0140086ED68 /* YelpSearchController.swift */,
+				2EC488D21F61D05D0086ED68 /* YelpSearchResultsDataSource.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		2EC488CB1F61CF040086ED68 /* Buisness Details */ = {
+			isa = PBXGroup;
+			children = (
+				2EC488D41F61D09F0086ED68 /* YelpBusinessDetailController.swift */,
+				2EC488D61F61D0D30086ED68 /* YelpBusinessDetailViewModel.swift */,
+				2EC488D81F61D10B0086ED68 /* YelpReviewsDataSource.swift */,
+				2EC488DA1F61D1950086ED68 /* ReviewCell.swift */,
+				2EC488DC1F61D1C70086ED68 /* ReviewCellViewModel.swift */,
+			);
+			name = "Buisness Details";
+			sourceTree = "<group>";
+		};
+		2EC488CC1F61CF100086ED68 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2EC488BF1F61CECE0086ED68 /* Info.plist */,
+				2EC488BA1F61CECE0086ED68 /* Assets.xcassets */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2EC488CD1F61CF2B0086ED68 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2EC488B51F61CECE0086ED68 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2EC488AF1F61CECE0086ED68 /* ReviewingRestaurants */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EC488C21F61CECE0086ED68 /* Build configuration list for PBXNativeTarget "ReviewingRestaurants" */;
+			buildPhases = (
+				2EC488AC1F61CECE0086ED68 /* Sources */,
+				2EC488AD1F61CECE0086ED68 /* Frameworks */,
+				2EC488AE1F61CECE0086ED68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReviewingRestaurants;
+			productName = ReviewingRestaurants;
+			productReference = 2EC488B01F61CECE0086ED68 /* ReviewingRestaurants.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2EC488A81F61CECE0086ED68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "David Anglin";
+				TargetAttributes = {
+					2EC488AF1F61CECE0086ED68 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 98KAY253SB;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2EC488AB1F61CECE0086ED68 /* Build configuration list for PBXProject "ReviewingRestaurants" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2EC488A71F61CECE0086ED68;
+			productRefGroup = 2EC488B11F61CECE0086ED68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2EC488AF1F61CECE0086ED68 /* ReviewingRestaurants */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2EC488AE1F61CECE0086ED68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EC488BE1F61CECE0086ED68 /* LaunchScreen.storyboard in Resources */,
+				2EC488BB1F61CECE0086ED68 /* Assets.xcassets in Resources */,
+				2EC488B91F61CECE0086ED68 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2EC488AC1F61CECE0086ED68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EC488D91F61D10B0086ED68 /* YelpReviewsDataSource.swift in Sources */,
+				2EC488B61F61CECE0086ED68 /* ViewController.swift in Sources */,
+				2EC488D71F61D0D30086ED68 /* YelpBusinessDetailViewModel.swift in Sources */,
+				2EC488F41F61D5110086ED68 /* BusinessHours.swift in Sources */,
+				2EC488E91F61D2BE0086ED68 /* Coordinate.swift in Sources */,
+				2EC488D11F61D0140086ED68 /* YelpSearchController.swift in Sources */,
+				2EC488DB1F61D1950086ED68 /* ReviewCell.swift in Sources */,
+				2EC488B41F61CECE0086ED68 /* AppDelegate.swift in Sources */,
+				2EC488EF1F61D3240086ED68 /* JSONDecodable.swift in Sources */,
+				2EC488E31F61D2580086ED68 /* YelpCategory.swift in Sources */,
+				2EC488D31F61D05D0086ED68 /* YelpSearchResultsDataSource.swift in Sources */,
+				2EC488E11F61D2320086ED68 /* YelpReview.swift in Sources */,
+				2EC488E71F61D29A0086ED68 /* YelpUser.swift in Sources */,
+				2EC488DF1F61D1F20086ED68 /* YelpBusiness.swift in Sources */,
+				2EC488F61F61D58D0086ED68 /* Address.swift in Sources */,
+				2EC488F21F61D3580086ED68 /* Endpoint.swift in Sources */,
+				2EC488D51F61D09F0086ED68 /* YelpBusinessDetailController.swift in Sources */,
+				2EC488DD1F61D1C70086ED68 /* ReviewCellViewModel.swift in Sources */,
+				2EC488E51F61D2790086ED68 /* YelpTransaction.swift in Sources */,
+				2EC488CF1F61CF900086ED68 /* PermissionsController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2EC488B71F61CECE0086ED68 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EC488B81F61CECE0086ED68 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2EC488BC1F61CECE0086ED68 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EC488BD1F61CECE0086ED68 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2EC488C01F61CECE0086ED68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2EC488C11F61CECE0086ED68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2EC488C31F61CECE0086ED68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 98KAY253SB;
+				INFOPLIST_FILE = ReviewingRestaurants/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidanglin.ReviewingRestaurants;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2EC488C41F61CECE0086ED68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 98KAY253SB;
+				INFOPLIST_FILE = ReviewingRestaurants/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidanglin.ReviewingRestaurants;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2EC488AB1F61CECE0086ED68 /* Build configuration list for PBXProject "ReviewingRestaurants" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EC488C01F61CECE0086ED68 /* Debug */,
+				2EC488C11F61CECE0086ED68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EC488C21F61CECE0086ED68 /* Build configuration list for PBXNativeTarget "ReviewingRestaurants" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EC488C31F61CECE0086ED68 /* Debug */,
+				2EC488C41F61CECE0086ED68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2EC488A81F61CECE0086ED68 /* Project object */;
+}
