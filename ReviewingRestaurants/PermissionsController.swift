@@ -7,8 +7,26 @@
 //
 
 import UIKit
+import OAuth2
 
 class PermissionsController: UIViewController {
+    
+    let oauth = OAuth2ClientCredentials(settings: [
+        "client_id" : "mE2RJWK_87Hb2yy8QnzIRw",
+        "client_secret" : "oKd2MpqARD4oXqgZh3VhLWogWXYS9dqN8kKOYClM94EuTEcIQxck7qwdeTBu75r9",
+        "authorize_uri" : "https://api.yelp.com/oauth2/token",
+        "secret_in_body" : true,
+        "keychain" : false
+        ])
+    
+    lazy var activityIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView()
+        indicator.center = self.view.center
+        indicator.hidesWhenStopped = true
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        
+        return indicator
+    }()
     
     var isAuthorizedForLocation: Bool
     var isAuthenticatedWithToken: Bool
@@ -89,6 +107,7 @@ class PermissionsController: UIViewController {
         
         view.addSubview(stackView)
         view.addSubview(dismissButton)
+        view.addSubview(activityIndicator)
         
         NSLayoutConstraint.activate([
             locationPermissionButton.heightAnchor.constraint(equalToConstant: 64.0),
@@ -101,7 +120,7 @@ class PermissionsController: UIViewController {
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32.0),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32.0),
             dismissButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16),
-            dismissButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            dismissButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             ])
         
     }
@@ -110,6 +129,24 @@ class PermissionsController: UIViewController {
     }
     
     func requestOAuthToken() {
+        activityIndicator.startAnimating()
+        oauth.authorize { authParams, error in
+            if let params = authParams {
+                guard let token = params["access_token"] as? String, let expiration = params["expires_in"] as? TimeInterval else { return }
+                
+               let account = YelpAccount(accessToken: token, expiration: expiration, grantDate: Date())
+                do {
+                    try? account.save()
+                    self.oauthTokenButton.setTitle("OAuth Token Granted", for: .disabled)
+                    self.oauthTokenButton.isEnabled = false
+                    self.activityIndicator.stopAnimating()
+                    self.popupAlert(title: "Successful", message: "Authentication Successful", actionTitles: ["Ok"], actions: [{ action in }])
+                }
+            } else {
+                self.activityIndicator.stopAnimating()
+                self.popupAlert(title: "Error", message: "Authorization was cancelled or went wrong: \(error!)", actionTitles: ["Ok"], actions: [{ action in } ])
+            }
+        }
     }
     
     func dismissPermissions() {

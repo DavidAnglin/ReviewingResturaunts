@@ -1,0 +1,9 @@
+{
+  "commitish" : "3.0.0",
+  "iOS" : [
+    {
+      "hash" : "a407be2dd202a31124600657f5758d27bfb0d88e0b132008e692456bad941713",
+      "name" : "Locksmith"
+    }
+  ]
+}

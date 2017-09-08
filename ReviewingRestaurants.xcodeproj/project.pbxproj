@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E2BA45D1F61F14C003578A0 /* OAuth2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2BA45C1F61F14C003578A0 /* OAuth2.framework */; };
+		2E2BA4601F61FCAC003578A0 /* YelpAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2BA45F1F61FCAC003578A0 /* YelpAccount.swift */; };
+		2E2BA4621F61FFDE003578A0 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2BA4611F61FFDE003578A0 /* Locksmith.framework */; };
+		2E2BA4651F622E07003578A0 /* UIAlert+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2BA4641F622E07003578A0 /* UIAlert+UIViewController.swift */; };
 		2EC488B41F61CECE0086ED68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488B31F61CECE0086ED68 /* AppDelegate.swift */; };
-		2EC488B61F61CECE0086ED68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488B51F61CECE0086ED68 /* ViewController.swift */; };
 		2EC488B91F61CECE0086ED68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EC488B71F61CECE0086ED68 /* Main.storyboard */; };
 		2EC488BB1F61CECE0086ED68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EC488BA1F61CECE0086ED68 /* Assets.xcassets */; };
 		2EC488BE1F61CECE0086ED68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EC488BC1F61CECE0086ED68 /* LaunchScreen.storyboard */; };
@@ -33,9 +36,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E2BA45C1F61F14C003578A0 /* OAuth2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuth2.framework; path = Carthage/Build/iOS/OAuth2.framework; sourceTree = "<group>"; };
+		2E2BA45F1F61FCAC003578A0 /* YelpAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAccount.swift; sourceTree = "<group>"; };
+		2E2BA4611F61FFDE003578A0 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
+		2E2BA4641F622E07003578A0 /* UIAlert+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlert+UIViewController.swift"; sourceTree = "<group>"; };
 		2EC488B01F61CECE0086ED68 /* ReviewingRestaurants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewingRestaurants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EC488B31F61CECE0086ED68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2EC488B51F61CECE0086ED68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2EC488B81F61CECE0086ED68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2EC488BA1F61CECE0086ED68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EC488BD1F61CECE0086ED68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,17 +71,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E2BA45D1F61F14C003578A0 /* OAuth2.framework in Frameworks */,
+				2E2BA4621F61FFDE003578A0 /* Locksmith.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E2BA45B1F61F14C003578A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E2BA4611F61FFDE003578A0 /* Locksmith.framework */,
+				2E2BA45C1F61F14C003578A0 /* OAuth2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2E2BA4631F622DED003578A0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2E2BA4641F622E07003578A0 /* UIAlert+UIViewController.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		2EC488A71F61CECE0086ED68 = {
 			isa = PBXGroup;
 			children = (
 				2EC488B21F61CECE0086ED68 /* ReviewingRestaurants */,
 				2EC488B11F61CECE0086ED68 /* Products */,
+				2E2BA45B1F61F14C003578A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,13 +116,13 @@
 		2EC488B21F61CECE0086ED68 /* ReviewingRestaurants */ = {
 			isa = PBXGroup;
 			children = (
-				2EC488C81F61CEEF0086ED68 /* Models */,
-				2EC488CD1F61CF2B0086ED68 /* Controllers */,
-				2EC488C91F61CEF50086ED68 /* Views */,
 				2EC488C51F61CEDB0086ED68 /* Permissions */,
-				2EC488C71F61CEE90086ED68 /* Networking */,
 				2EC488CA1F61CEFD0086ED68 /* Search */,
 				2EC488CB1F61CF040086ED68 /* Buisness Details */,
+				2EC488C81F61CEEF0086ED68 /* Models */,
+				2EC488C91F61CEF50086ED68 /* Views */,
+				2E2BA4631F622DED003578A0 /* Extensions */,
+				2EC488C71F61CEE90086ED68 /* Networking */,
 				2EC488C61F61CEE30086ED68 /* Delegates */,
 				2EC488CC1F61CF100086ED68 /* Supporting Files */,
 			);
@@ -107,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				2EC488CE1F61CF900086ED68 /* PermissionsController.swift */,
+				2E2BA45F1F61FCAC003578A0 /* YelpAccount.swift */,
 			);
 			name = Permissions;
 			sourceTree = "<group>";
@@ -182,14 +209,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2EC488CD1F61CF2B0086ED68 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				2EC488B51F61CECE0086ED68 /* ViewController.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,6 +219,7 @@
 				2EC488AC1F61CECE0086ED68 /* Sources */,
 				2EC488AD1F61CECE0086ED68 /* Frameworks */,
 				2EC488AE1F61CECE0086ED68 /* Resources */,
+				2E2BA45E1F61F160003578A0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -258,22 +278,41 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E2BA45E1F61F160003578A0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/OAuth2.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Locksmith.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2EC488AC1F61CECE0086ED68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2EC488D91F61D10B0086ED68 /* YelpReviewsDataSource.swift in Sources */,
-				2EC488B61F61CECE0086ED68 /* ViewController.swift in Sources */,
 				2EC488D71F61D0D30086ED68 /* YelpBusinessDetailViewModel.swift in Sources */,
 				2EC488F41F61D5110086ED68 /* BusinessHours.swift in Sources */,
 				2EC488E91F61D2BE0086ED68 /* Coordinate.swift in Sources */,
 				2EC488D11F61D0140086ED68 /* YelpSearchController.swift in Sources */,
 				2EC488DB1F61D1950086ED68 /* ReviewCell.swift in Sources */,
 				2EC488B41F61CECE0086ED68 /* AppDelegate.swift in Sources */,
+				2E2BA4601F61FCAC003578A0 /* YelpAccount.swift in Sources */,
 				2EC488EF1F61D3240086ED68 /* JSONDecodable.swift in Sources */,
 				2EC488E31F61D2580086ED68 /* YelpCategory.swift in Sources */,
 				2EC488D31F61D05D0086ED68 /* YelpSearchResultsDataSource.swift in Sources */,
+				2E2BA4651F622E07003578A0 /* UIAlert+UIViewController.swift in Sources */,
 				2EC488E11F61D2320086ED68 /* YelpReview.swift in Sources */,
 				2EC488E71F61D29A0086ED68 /* YelpUser.swift in Sources */,
 				2EC488DF1F61D1F20086ED68 /* YelpBusiness.swift in Sources */,
@@ -406,6 +445,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 98KAY253SB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ReviewingRestaurants/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidanglin.ReviewingRestaurants;
@@ -419,6 +462,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 98KAY253SB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ReviewingRestaurants/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidanglin.ReviewingRestaurants;
@@ -446,6 +493,7 @@
 				2EC488C41F61CECE0086ED68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
