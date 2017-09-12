@@ -27,7 +27,7 @@ class YelpSearchResultsDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "businessCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchResultCell", for: indexPath)
         
         let business = object(at: indexPath)
         cell.textLabel?.text = business.name

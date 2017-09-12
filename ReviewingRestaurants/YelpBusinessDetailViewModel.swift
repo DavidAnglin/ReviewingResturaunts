@@ -29,13 +29,8 @@ extension YelpBusinessDetailViewModel {
         
         guard let hours = business.hours else { return nil }
         
-        for day in hours.schedule {
-            print(day.day)
-        }
-        
         let currentDayValue = Date.currentDay
-        print("Current Day: \(currentDayValue)")
-        let today = hours.schedule.filter({ $0.day.rawValue == Date.currentDay }).first!
+        let today = hours.schedule.filter({ $0.day.rawValue == currentDayValue }).first!
         
         let startString = DateFormatter.stringFromDateString(today.start, withInputDateFormat: "HHmm")
         let endString = DateFormatter.stringFromDateString(today.end, withInputDateFormat: "HHmm")

@@ -19,6 +19,14 @@ struct YelpAccount {
 
 extension YelpAccount {
     
+    static var isAuthorized: Bool {
+        if let _ = loadFromKeychain() {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     struct Keys {
         static let token = "token"
         static let expirationPeriod = "expirationPeriod"

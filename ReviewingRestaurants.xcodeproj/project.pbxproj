@@ -11,6 +11,13 @@
 		2E2BA4601F61FCAC003578A0 /* YelpAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2BA45F1F61FCAC003578A0 /* YelpAccount.swift */; };
 		2E2BA4621F61FFDE003578A0 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2BA4611F61FFDE003578A0 /* Locksmith.framework */; };
 		2E2BA4651F622E07003578A0 /* UIAlert+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2BA4641F622E07003578A0 /* UIAlert+UIViewController.swift */; };
+		2E2BA4671F66D4E8003578A0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2BA4661F66D4E8003578A0 /* LocationManager.swift */; };
+		2E2BA4691F66F343003578A0 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2BA4681F66F343003578A0 /* APIClient.swift */; };
+		2E2BA46B1F66F647003578A0 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2BA46A1F66F647003578A0 /* Result.swift */; };
+		2E2BA46D1F66FA43003578A0 /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2BA46C1F66FA43003578A0 /* YelpClient.swift */; };
+		2E2BA46F1F6714A6003578A0 /* YelpBusinessDetailsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2BA46E1F6714A6003578A0 /* YelpBusinessDetailsOperation.swift */; };
+		2E2BA4711F671F9B003578A0 /* YelpBusinessReviewsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2BA4701F671F9B003578A0 /* YelpBusinessReviewsOperation.swift */; };
+		2E2BA4731F672C71003578A0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2BA4721F672C71003578A0 /* MapKit.framework */; };
 		2EC488B41F61CECE0086ED68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC488B31F61CECE0086ED68 /* AppDelegate.swift */; };
 		2EC488B91F61CECE0086ED68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EC488B71F61CECE0086ED68 /* Main.storyboard */; };
 		2EC488BB1F61CECE0086ED68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EC488BA1F61CECE0086ED68 /* Assets.xcassets */; };
@@ -40,6 +47,13 @@
 		2E2BA45F1F61FCAC003578A0 /* YelpAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAccount.swift; sourceTree = "<group>"; };
 		2E2BA4611F61FFDE003578A0 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
 		2E2BA4641F622E07003578A0 /* UIAlert+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlert+UIViewController.swift"; sourceTree = "<group>"; };
+		2E2BA4661F66D4E8003578A0 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		2E2BA4681F66F343003578A0 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		2E2BA46A1F66F647003578A0 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		2E2BA46C1F66FA43003578A0 /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
+		2E2BA46E1F6714A6003578A0 /* YelpBusinessDetailsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpBusinessDetailsOperation.swift; sourceTree = "<group>"; };
+		2E2BA4701F671F9B003578A0 /* YelpBusinessReviewsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpBusinessReviewsOperation.swift; sourceTree = "<group>"; };
+		2E2BA4721F672C71003578A0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2EC488B01F61CECE0086ED68 /* ReviewingRestaurants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewingRestaurants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EC488B31F61CECE0086ED68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EC488B81F61CECE0086ED68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E2BA45D1F61F14C003578A0 /* OAuth2.framework in Frameworks */,
+				2E2BA4731F672C71003578A0 /* MapKit.framework in Frameworks */,
 				2E2BA4621F61FFDE003578A0 /* Locksmith.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +97,7 @@
 		2E2BA45B1F61F14C003578A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E2BA4721F672C71003578A0 /* MapKit.framework */,
 				2E2BA4611F61FFDE003578A0 /* Locksmith.framework */,
 				2E2BA45C1F61F14C003578A0 /* OAuth2.framework */,
 			);
@@ -134,6 +150,7 @@
 			children = (
 				2EC488CE1F61CF900086ED68 /* PermissionsController.swift */,
 				2E2BA45F1F61FCAC003578A0 /* YelpAccount.swift */,
+				2E2BA4661F66D4E8003578A0 /* LocationManager.swift */,
 			);
 			name = Permissions;
 			sourceTree = "<group>";
@@ -151,6 +168,11 @@
 			children = (
 				2EC488EE1F61D3240086ED68 /* JSONDecodable.swift */,
 				2EC488F11F61D3580086ED68 /* Endpoint.swift */,
+				2E2BA4681F66F343003578A0 /* APIClient.swift */,
+				2E2BA46A1F66F647003578A0 /* Result.swift */,
+				2E2BA46C1F66FA43003578A0 /* YelpClient.swift */,
+				2E2BA46E1F6714A6003578A0 /* YelpBusinessDetailsOperation.swift */,
+				2E2BA4701F671F9B003578A0 /* YelpBusinessReviewsOperation.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -244,6 +266,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 98KAY253SB;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -301,26 +328,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E2BA46D1F66FA43003578A0 /* YelpClient.swift in Sources */,
 				2EC488D91F61D10B0086ED68 /* YelpReviewsDataSource.swift in Sources */,
 				2EC488D71F61D0D30086ED68 /* YelpBusinessDetailViewModel.swift in Sources */,
 				2EC488F41F61D5110086ED68 /* BusinessHours.swift in Sources */,
 				2EC488E91F61D2BE0086ED68 /* Coordinate.swift in Sources */,
 				2EC488D11F61D0140086ED68 /* YelpSearchController.swift in Sources */,
 				2EC488DB1F61D1950086ED68 /* ReviewCell.swift in Sources */,
+				2E2BA46B1F66F647003578A0 /* Result.swift in Sources */,
 				2EC488B41F61CECE0086ED68 /* AppDelegate.swift in Sources */,
 				2E2BA4601F61FCAC003578A0 /* YelpAccount.swift in Sources */,
 				2EC488EF1F61D3240086ED68 /* JSONDecodable.swift in Sources */,
 				2EC488E31F61D2580086ED68 /* YelpCategory.swift in Sources */,
+				2E2BA4711F671F9B003578A0 /* YelpBusinessReviewsOperation.swift in Sources */,
 				2EC488D31F61D05D0086ED68 /* YelpSearchResultsDataSource.swift in Sources */,
 				2E2BA4651F622E07003578A0 /* UIAlert+UIViewController.swift in Sources */,
 				2EC488E11F61D2320086ED68 /* YelpReview.swift in Sources */,
 				2EC488E71F61D29A0086ED68 /* YelpUser.swift in Sources */,
+				2E2BA4671F66D4E8003578A0 /* LocationManager.swift in Sources */,
 				2EC488DF1F61D1F20086ED68 /* YelpBusiness.swift in Sources */,
 				2EC488F61F61D58D0086ED68 /* Address.swift in Sources */,
 				2EC488F21F61D3580086ED68 /* Endpoint.swift in Sources */,
 				2EC488D51F61D09F0086ED68 /* YelpBusinessDetailController.swift in Sources */,
 				2EC488DD1F61D1C70086ED68 /* ReviewCellViewModel.swift in Sources */,
 				2EC488E51F61D2790086ED68 /* YelpTransaction.swift in Sources */,
+				2E2BA4691F66F343003578A0 /* APIClient.swift in Sources */,
+				2E2BA46F1F6714A6003578A0 /* YelpBusinessDetailsOperation.swift in Sources */,
 				2EC488CF1F61CF900086ED68 /* PermissionsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

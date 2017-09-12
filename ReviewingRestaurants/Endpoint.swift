@@ -36,6 +36,15 @@ extension Endpoint {
         let url = urlComponents.url!
         return URLRequest(url: url)
     }
+    
+    func requestWithAuthorizationHeader(oauthToken: String) -> URLRequest {
+        
+        var oauthRequest = request
+        
+        oauthRequest.addValue("Bearer \(oauthToken)", forHTTPHeaderField: "Authorization")
+        
+        return oauthRequest
+    }
 }
 
 enum Yelp {

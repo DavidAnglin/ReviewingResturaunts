@@ -6,10 +6,21 @@
 //  Copyright © 2017 David Anglin. All rights reserved.
 //
 
+
+// Location Services
+// 1) Significant Changes - low power, only notified when user makes a large location change
+// 2) Standard Location Services - highly configurable way to get users location and make changes
+// 3) Region Monitoring - updates when user crosses boundaries of geographical region or bluetooth region
+
+// Local Authorization
+// 1) WhenInUse - When the app is in the foreground and in use(NSLocationWhenInUseUsageDescription)
+// 2) Always - Significant location changes, region monitoring(NSLocationAlwaysUsageDescription)
+
 import UIKit
 import OAuth2
+import CoreLocation
 
-class PermissionsController: UIViewController {
+class PermissionsController: UIViewController, LocationPermissionsDelegate {
     
     let oauth = OAuth2ClientCredentials(settings: [
         "client_id" : "mE2RJWK_87Hb2yy8QnzIRw",
@@ -18,6 +29,10 @@ class PermissionsController: UIViewController {
         "secret_in_body" : true,
         "keychain" : false
         ])
+    
+    lazy var locationManager: LocationManager = {
+        return LocationManager(delegate: nil, permissionsDelegate: self)
+    }()
     
     lazy var activityIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView()
@@ -29,7 +44,7 @@ class PermissionsController: UIViewController {
     }()
     
     var isAuthorizedForLocation: Bool
-    var isAuthenticatedWithToken: Bool
+    var isAuthorizedWithToken: Bool
     
     lazy var locationPermissionButton:  UIButton = {
         let title = self.isAuthorizedForLocation ? "Location Permissions Granted" : "Request Location Permissions"
@@ -51,10 +66,10 @@ class PermissionsController: UIViewController {
     }()
     
     lazy var oauthTokenButton:  UIButton = {
-        let title = self.isAuthenticatedWithToken ? "OAuth Token Granted" : "Request OAuth Token"
+        let title = self.isAuthorizedWithToken ? "OAuth Token Granted" : "Request OAuth Token"
         let button = UIButton(type: .system)
-        let controlState = self.isAuthenticatedWithToken ? UIControlState.disabled : UIControlState.normal
-        button.isEnabled = !self.isAuthenticatedWithToken
+        let controlState = self.isAuthorizedWithToken ? UIControlState.disabled : UIControlState.normal
+        button.isEnabled = !self.isAuthorizedWithToken
         button.setTitle(title, for: controlState)
         button.addTarget(self, action: #selector(PermissionsController.requestOAuthToken), for: .touchUpInside)
         
@@ -82,9 +97,9 @@ class PermissionsController: UIViewController {
         fatalError("init coder not implemented")
     }
     
-    init(isAuthorizedForLocation authorized: Bool, isAuthenticatedWithToken authenticated: Bool) {
-        self.isAuthorizedForLocation = authorized
-        self.isAuthenticatedWithToken = authenticated
+    init(isAuthorizedForLocation locationAuthorization: Bool, isAuthorizedWithToken tokenAuthorization: Bool) {
+        self.isAuthorizedForLocation = locationAuthorization
+        self.isAuthorizedWithToken = tokenAuthorization
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -126,6 +141,14 @@ class PermissionsController: UIViewController {
     }
     
     func requestLocationPermissions() {
+        do {
+            try locationManager.requestLocationAuthorization()
+            
+        } catch LocationError.disallowedByUser {
+            // Show alert to users
+        } catch let error {
+            print("Location Authorization Failed: \(error.localizedDescription)")
+        }
     }
     
     func requestOAuthToken() {
@@ -152,5 +175,16 @@ class PermissionsController: UIViewController {
     func dismissPermissions() {
         dismiss(animated: true, completion: nil)
     }
+    
+    // MARK: - Location Permissions Delegate -
+    func authorizationSucceeded() {
+        locationPermissionButton.setTitle("Locations Permissions Granted", for: .disabled)
+        locationPermissionButton.isEnabled = false
+    }
+    
+    func authorizationFaliedWithStatus(_ status: CLAuthorizationStatus) {
+        //
+    }
+    
 }
 
